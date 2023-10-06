@@ -39,21 +39,22 @@ Data Mahasiswa - Staff
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($mahasiswa as $mhs)
                         <tr class="bg-white border-b">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                                1
+                                {{ $mhs['id']}}
                             </th>
                             <td class="px-6 py-4">
-                                2009106085
+                                {{ $mhs['nim']}}
                             </td>
                             <td class="px-6 py-4">
-                                Tegar Fitrah Naba Atthoriq
+                                {{ $mhs['nama']}}
                             </td>
                             <td class="px-6 py-4">
-                                B
+                                {{ $mhs['kelas']}}
                             </td>
                             <td class="px-6 py-4">
-                                2020
+                                {{ $mhs['angkatan']}}
                             </td>
                             <td class="px-6 py-4">
                                 <div class="w-full h-auto">
@@ -62,6 +63,8 @@ Data Mahasiswa - Staff
                                 </div>
                             </td>
                         </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>

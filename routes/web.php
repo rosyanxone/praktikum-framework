@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,7 +27,9 @@ Route::get('/staff/dashboard', function () {
 })->name('staff.dashboard');
 
 Route::get('/staff/mahasiswa', function () {
-    return view('staff.mahasiswa');
+    return view('staff.mahasiswa', [
+        'mahasiswa' => Mahasiswa::all()
+    ]);
 })->name('staff.mahasiswa');
 
 Route::get('/staff/dosen', function () {
