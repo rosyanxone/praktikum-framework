@@ -18,7 +18,9 @@
         {{-- Kontak dan Lokasi --}}
         <div class="basis-1/4 flex flex-col gap-1">
             <h5 class="text-slate-300 font-medium pb-2">Lokasi & Kontak</h5>
-            <div class="bg-slate-500 h-36 mr-16 rounded-lg mb-2"></div>
+            <a href="https://maps.app.goo.gl/v7uvZefGHsAUTq5P8" class="bg-slate-500 h-36 mr-16 rounded-lg mb-2 overflow-hidden">
+                <img src="{{ asset('assets/images/Informatika Unmul - Google Maps.png') }}" alt="">
+            </a>
             <a href="#" class="group flex gap-2 p-2 mr-16 rounded-lg hover:bg-slate-800 hover:text-white transition ease-in">
                 <svg class="fill-slate-800 group-hover:fill-slate-300 transition ease-in" sxmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm640-480L501-453q-5 3-10.5 4.5T480-447q-5 0-10.5-1.5T459-453L160-640v400h640v-400ZM480-520l320-200H160l320 200ZM160-640v10-59 1-32 32-.5 58.5-10 400-400Z"/></svg>
                 <p>informatika@ft.unmul.ac.id</p>

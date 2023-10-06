@@ -16,7 +16,7 @@
     </div>
     <div class="px-8 flex items-center gap-x-4">
         <div class="w-12 h-12 rounded-full overflow-hidden">
-            <img src="{{ asset($gambar) }}" alt="" class="object-cover">
+            <img src="{{ $gambar }}" alt="" class="object-cover">
         </div>
         <div>
             <p>{{ $nama }}</p>

@@ -47,10 +47,11 @@ Beranda - Informatika | Universitas Mulawarman
 
 {{-- Data Statistik --}}
 <section class="h-[400px] flex flex-col">
-    <div class="h-1/3 bg-blue-900 flex justify-center items-center">
-        <div class="h-1/3 flex  gap-4">
-            <h3 class="text-white text-5xl font-bold">Terakreditasi B</h3>
-            <svg class="h-full" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 -960 960 960"><path d="m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z" />
+    <div class="h-1/3 py-8 bg-blue-900 flex justify-center items-center">
+        <div class="h-full flex gap-4 items-center">
+            <h3 class="text-white text-5xl font-bold align-middle">Terakreditasi B</h3>
+            <svg class="h-full" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 -960 960 960">
+                <path d="m438-452-58-57q-11-11-27.5-11T324-508q-11 11-11 28t11 28l86 86q12 12 28 12t28-12l170-170q12-12 11.5-28T636-592q-12-12-28.5-12.5T579-593L438-452ZM326-90l-58-98-110-24q-15-3-24-15.5t-7-27.5l11-113-75-86q-10-11-10-26t10-26l75-86-11-113q-2-15 7-27.5t24-15.5l110-24 58-98q8-13 22-17.5t28 1.5l104 44 104-44q14-6 28-1.5t22 17.5l58 98 110 24q15 3 24 15.5t7 27.5l-11 113 75 86q10 11 10 26t-10 26l-75 86 11 113q2 15-7 27.5T802-212l-110 24-58 98q-8 13-22 17.5T584-74l-104-44-104 44q-14 6-28 1.5T326-90Zm52-72 102-44 104 44 56-96 110-26-10-112 74-84-74-86 10-112-110-24-58-96-102 44-104-44-56 96-110 24 10 112-74 86 74 84-10 114 110 24 58 96Zm102-318Z" />
             </svg>
         </div>
     </div>
@@ -111,7 +112,7 @@ Beranda - Informatika | Universitas Mulawarman
     <div class="container h-3/5 gap-8 grid grid-cols-3">
         {{-- card 1 --}}
         <div class="h-64 w-auto flex bg-white rounded-3xl drop-shadow-lg">
-            <img src="{{ asset('assets/images/ka-prodi.jpg') }}" alt="" class="w-1/3 h-full rounded-s-3xl object-cover">
+            <img src="https://avatars.githubusercontent.com/Nizares" alt="" class="w-1/3 h-full rounded-s-3xl object-cover">
             <div class="w-2/3 flex flex-col p-8 justify-between divide-y">
                 <div>
                     <h4 class="truncate font-bold text-2xl">Identifikasi Kematangan Tempe menggunakan Convolutional
@@ -128,7 +129,7 @@ Beranda - Informatika | Universitas Mulawarman
 
         {{-- card 2 --}}
         <div class="h-64 w-auto flex bg-white rounded-3xl drop-shadow-lg">
-            <img src="{{ asset('assets/images/ka-prodi.jpg') }}" alt="" class="w-1/3 h-full rounded-s-3xl object-cover">
+            <img src="https://avatars.githubusercontent.com/FerryFn" alt="" class="w-1/3 h-full rounded-s-3xl object-cover">
             <div class="w-2/3 flex flex-col p-8 justify-between divide-y">
                 <div>
                     <h4 class="truncate font-bold text-2xl">Identifikasi Kematangan Tempe menggunakan Convolutional
@@ -145,7 +146,7 @@ Beranda - Informatika | Universitas Mulawarman
 
         {{-- card 3 --}}
         <div class="h-64 w-auto flex bg-white rounded-3xl drop-shadow-lg">
-            <img src="{{ asset('assets/images/ka-prodi.jpg') }}" alt="" class="w-1/3 h-full rounded-s-3xl object-cover">
+            <img src="https://avatars.githubusercontent.com/tegarfn" alt="" class="w-1/3 h-full rounded-s-3xl object-cover">
             <div class="w-2/3 flex flex-col p-8 justify-between divide-y">
                 <div>
                     <h4 class="truncate font-bold text-2xl">Identifikasi Kematangan Tempe menggunakan Convolutional
@@ -229,21 +230,91 @@ Beranda - Informatika | Universitas Mulawarman
 </section>
 
 {{-- MBKM --}}
-<section class="h-[500px] bg-white flex flex-col items-center overflow-hidden">
-    <h2 class="h-2/5 text-4xl font-bold flex items-center">Kampus Merdeka</h2>
-    <p>Coming Soon!</p>
+<section class="h-[800px] flex items-center overflow-hidden my-16">
+    <div class="basis-1/3 h-full px-24 py-16 bg-gradient-to-tr from-blue-950 to-blue-800 overflow-hidden relative flex flex-col justify-center items-center">
+        <img src="{{ asset('assets/images/kampus-merdeka-white.png') }}" alt="" class="basis-1/2 object-contain">
+        <div class="basis-1/2 flex items-center">
+            <p class="text-justify text-xl font-medium text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus harum fugit est suscipit repellat minima veritatis qui labore!</p>
+        </div>
+    </div>
+    <div class="basis-2/3 h-full flex flex-col">
+        <div class="basis-1/2 w-full flex">
+            <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <div class="absolute">
+                    <h2 class="font-bold text-2xl text-white pb-2">Studi Independen</h2><hr>
+                </div>
+            </div>
+            <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <div class="absolute">
+                    <h2 class="font-bold text-2xl text-white pb-2">Magang</h2><hr>
+                </div>
+            </div>
+            <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <div class="absolute">
+                    <h2 class="font-bold text-2xl text-white pb-2 text-center">Pertukaran Mahasiswa<br>Merdeka</h2><hr>
+                </div>
+            </div>
+        </div>
+        <div class="basis-1/2 w-full flex">
+            <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <div class="absolute">
+                    <h2 class="font-bold text-2xl text-white pb-2">Kedaireka</h2><hr>
+                </div>
+            </div>
+            <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <div class="absolute">
+                    <h2 class="font-bold text-2xl text-white pb-2">Bangkit Academy</h2><hr>
+                </div>
+            </div>
+            <div class="basis-1/3 w-full bg-gradient-to-r from-sky-700 to-blue-800 flex justify-center items-center">
+                <h2 class="font-bold text-2xl text-white pb-2 mr-4">Lainnya</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white"><path d="M647-440H200q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520h447L451-716q-12-12-11.5-28t12.5-28q12-11 28-11.5t28 11.5l264 264q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L508-188q-11 11-27.5 11T452-188q-12-12-12-28.5t12-28.5l195-195Z"/></svg>
+            </div>
+        </div>
+    </div>
 </section>
 
 {{-- Kegiatan --}}
-<section class="h-[500px] bg-white flex flex-col items-center overflow-hidden">
-    <h2 class="h-2/5 text-4xl font-bold flex items-center">Kegiatan Mahasiswa</h2>
-    <p>Coming Soon!</p>
+<section class="h-[800px] bg-slate-300 flex items-center overflow-hidden">
+    <div class="basis-1/2 h-full flex flex-col">
+        <div class="basis-1/2 w-full flex">
+            <div class="basis-1/2 w-full px-8 bg-blue-900 flex flex-col justify-center">
+                <h2 class="font-bold text-2xl text-white pb-2">Praktikum</h2>
+                <hr><br>
+                <p class="text-lg text-white text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ex laborum eaque dolor voluptatibus provident?</p>
+            </div>
+            <div class="basis-1/2 w-full overflow-hidden">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" class="h-full object-cover hover:scale-110 transition ease-in">
+            </div>
+        </div>
+        <div class="basis-1/2 w-full flex">
+            <div class="basis-1/2 w-full overflow-hidden">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" class="h-full object-cover hover:scale-110 transition ease-in">
+            </div>
+            <div class="basis-1/2 w-full px-8 bg-blue-900 flex flex-col justify-center">
+                <h2 class="font-bold text-2xl text-white pb-2">Study Club</h2>
+                <hr><br>
+                <p class="text-lg text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum corrupti voluptates quo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="group basis-1/2 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
+        <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover group-hover:scale-105 group-hover:brightness-75 transition ease-in">
+        <div class="absolute hidden group-hover:block">
+            <h2 class="font-bold text-4xl text-white pb-2">Kegiatan Mahasiswa</h2><hr>
+        </div>
+    </div>
 </section>
 
 {{-- Berita Terbaru --}}
 <section class="h-[500px] bg-white flex flex-col items-center overflow-hidden">
     <h2 class="h-2/5 text-4xl font-bold flex items-center">Berita Terkini</h2>
-    <p>Coming Soon!</p>
+    <p class="text-slate-400">Tidak ada berita</p>
 </section>
 @include('components.footer')
 @endsection

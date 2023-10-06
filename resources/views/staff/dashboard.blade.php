@@ -7,7 +7,7 @@ Dashboard - Staff
 <div class="w-full h-full flex">
     @include('components.sidebar')
     <div class="w-full h-screen flex gap-4 flex-col bg-slate-100">
-        @include('components.header', ['nama' => 'Tegar', 'gambar' => 'assets/images/ka-prodi.jpg'])
+        @include('components.header', ['nama' => 'Tegar', 'gambar' => 'https://avatars.githubusercontent.com/tegarfn'])
 
         <div class="w-auto h-[400px] mx-4 gap-4 flex">
             <div class="basis-1/3 h-full p-8 bg-white rounded-lg drop-shadow-md">
