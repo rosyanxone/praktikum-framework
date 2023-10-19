@@ -11,9 +11,14 @@ class Dosen extends Model
     use HasFactory;
     protected $table = 'dosens';
     protected $fillable = ['nip', 'nama'];
+    protected $appends = ['total_mahasiswa'];
     
     public function mahasiswa(): HasMany
     {
         return $this->hasMany(Mahasiswa::class);
+    }
+
+    public function getTotalMahasiswaAttribute() {
+        return $this->mahasiswa->count();
     }
 }
