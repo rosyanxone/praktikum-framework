@@ -12,7 +12,7 @@ class Dosen extends Model
     protected $table = 'dosens';
     protected $fillable = ['nip', 'nama'];
     protected $appends = ['total_mahasiswa'];
-
+    
     public function mahasiswa(): HasMany
     {
         return $this->hasMany(Mahasiswa::class);
