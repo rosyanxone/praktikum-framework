@@ -43,7 +43,7 @@
                                         {{ ++$index }}
                                     </th>
                                     <td class="px-6 py-4">
-                                        {{ $item->nama }}
+                                        {{ $item->nip }}
                                     </td>
                                     <td class="px-6 py-4">
                                         {{ $item->nama }}
