@@ -2,13 +2,19 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Mahasiswa extends Model
 {
     use HasFactory;
 
     protected $table = 'mahasiswas';
-    protected $fillable = ['id', 'nim', 'nama', 'kelas', 'angkatan'];
+    protected $fillable = ['nim', 'nama', 'kelas', 'angkatan'];
+
+    public function dosen(): BelongsTo
+    {
+        return $this->belongsTo(Dosen::class, 'dosen_id');
+    }
 }
