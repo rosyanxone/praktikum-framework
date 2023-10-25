@@ -4,10 +4,10 @@
 Beranda - Informatika | Universitas Mulawarman
 @endsection
 
-@section('content')
 @include('components.navigation-bar')
+@section('content')
 {{-- Hero --}}
-<section class="h-[700px] relative">
+<section class="h-screen relative">
     <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="Kampus Informatika" class="absolute w-full h-full object-cover -z-10 brightness-50">
     <div class="h-full flex flex-col place-content-center text-center text-white">
         <h1 class="font-bold text-5xl">PUSAT STUDI KOMPUTER DAN INFORMATIKA</h1><br>
@@ -240,19 +240,19 @@ Beranda - Informatika | Universitas Mulawarman
     <div class="basis-2/3 h-full flex flex-col">
         <div class="basis-1/2 w-full flex">
             <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-105 brightness-50 transition ease-in">
                 <div class="absolute">
                     <h2 class="font-bold text-2xl text-white pb-2">Studi Independen</h2><hr>
                 </div>
             </div>
             <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-105 brightness-50 transition ease-in">
                 <div class="absolute">
                     <h2 class="font-bold text-2xl text-white pb-2">Magang</h2><hr>
                 </div>
             </div>
             <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-105 brightness-50 transition ease-in">
                 <div class="absolute">
                     <h2 class="font-bold text-2xl text-white pb-2 text-center">Pertukaran Mahasiswa<br>Merdeka</h2><hr>
                 </div>
@@ -260,13 +260,13 @@ Beranda - Informatika | Universitas Mulawarman
         </div>
         <div class="basis-1/2 w-full flex">
             <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-105 brightness-50 transition ease-in">
                 <div class="absolute">
                     <h2 class="font-bold text-2xl text-white pb-2">Kedaireka</h2><hr>
                 </div>
             </div>
             <div class="basis-1/3 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-110 brightness-50 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-105 brightness-50 transition ease-in">
                 <div class="absolute">
                     <h2 class="font-bold text-2xl text-white pb-2">Bangkit Academy</h2><hr>
                 </div>
@@ -289,12 +289,12 @@ Beranda - Informatika | Universitas Mulawarman
                 <p class="text-lg text-white text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni ex laborum eaque dolor voluptatibus provident?</p>
             </div>
             <div class="basis-1/2 w-full overflow-hidden">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" class="h-full object-cover hover:scale-110 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" class="h-full object-cover hover:scale-105 transition ease-in">
             </div>
         </div>
         <div class="basis-1/2 w-full flex">
             <div class="basis-1/2 w-full overflow-hidden">
-                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" class="h-full object-cover hover:scale-110 transition ease-in">
+                <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" class="h-full object-cover hover:scale-105 transition ease-in">
             </div>
             <div class="basis-1/2 w-full px-8 bg-blue-900 flex flex-col justify-center">
                 <h2 class="font-bold text-2xl text-white pb-2">Study Club</h2>
@@ -303,10 +303,11 @@ Beranda - Informatika | Universitas Mulawarman
             </div>
         </div>
     </div>
-    <div class="group basis-1/2 h-full bg-blue-950 overflow-hidden relative flex justify-center items-center">
-        <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover group-hover:scale-105 group-hover:brightness-75 transition ease-in">
-        <div class="absolute hidden group-hover:block">
-            <h2 class="font-bold text-4xl text-white pb-2">Kegiatan Mahasiswa</h2><hr>
+    <div class="basis-1/2 h-full bg-blue-950 overflow-hidden relative flex justify-end items-end">
+        <img src="{{ asset('assets/images/gedung-baru-teknik.jpg') }}" alt="" class="h-full w-full absolute object-cover hover:scale-105 brightness-75 transition ease-in">
+        <div class="absolute px-16 py-24 bg-gradient-to-r from-sky-800 to-blue-900 flex justify-center items-center">
+            <h2 class="font-bold text-2xl text-white pb-2 mr-4">Lainnya</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white"><path d="M647-440H200q-17 0-28.5-11.5T160-480q0-17 11.5-28.5T200-520h447L451-716q-12-12-11.5-28t12.5-28q12-11 28-11.5t28 11.5l264 264q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L508-188q-11 11-27.5 11T452-188q-12-12-12-28.5t12-28.5l195-195Z"/></svg>
         </div>
     </div>
 </section>

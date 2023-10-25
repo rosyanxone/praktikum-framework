@@ -1,8 +1,8 @@
-<nav class="flex flex-row p-8 justify-between items-center bg-white z-10 sticky top-0">
+<nav id="navbar" class="fixed w-screen flex flex-row p-8 justify-between items-center z-10 top-0 transition">
     <a href="#" class="basis-1/4">
         <img src="{{ asset('assets/images/logo-informatika-full.png') }}" alt="Logo Informatika" class="w-fit h-12">
     </a>
-    <ul class="flex flex-row gap-12 justify-center basis-1/2">
+    <ul class="nav-items text-white flex flex-row gap-12 justify-center basis-1/2">
         <li><a href="#">Tentang</a></li>
         <li><a href="#">Akademik</a></li>
         <li><a href="#">Kampus</a></li>

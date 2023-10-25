@@ -66,11 +66,11 @@ Register - Informatika | Universitas Mulawarman
                         <input type="password" name="confirm_password" placeholder="Confirm Password" class="w-full ps-12 pe-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
                     </div>
                     <div class="w-full flex justify-between mt-4">
-                        <a href="{{ route('login') }}" class=" text-sm text-end text-blue-900 hover:font-medium">Already have an account</a>
-                        <a href="#" class=" text-sm text-end text-blue-900 hover:font-medium">Forgot password?</a>
+                        <a href="{{ route('login') }}" class=" text-sm text-end text-blue-900 hover:font-medium">Saya sudah punya akun</a>
+                        <a href="#" class=" text-sm text-end text-blue-900 hover:font-medium">Lupa password?</a>
                     </div>
                     <button type="submit" class="w-full h-auto py-4 mt-16 text-white font-medium bg-blue-800 rounded-md flex justify-center items-center hover:bg-blue-700">
-                        Kirim
+                        Daftar
                     </button>
                 </form>
             </div>

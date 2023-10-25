@@ -1,7 +1,7 @@
 <div class="w-[400px] bg-blue-800">
-    <div class="p-8 h-screen fixed flex flex-col justify-between">
+    <div class="fixed h-full p-4 flex flex-col justify-between">
         <img src="{{ asset('assets/images/logo-informatika-white.png') }}" alt="" class="w-16">
-        <div>
+        <div class="">
             <a href="{{ route('staff.dashboard') }}"
                 class="flex gap-4 items-center p-4 rounded-md hover:bg-blue-700  transition ease-out duration-150">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" class="w-8 h-8 fill-white">

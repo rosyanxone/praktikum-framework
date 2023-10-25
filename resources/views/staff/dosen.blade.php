@@ -4,7 +4,7 @@
 @endsection
 
 @section('content')
-    <div class="w-full h-full flex">
+    <div class="w-full h-screen flex">
         @include('components.sidebar')
         <div class="w-full flex flex-col bg-slate-100">
             @include('components.header')

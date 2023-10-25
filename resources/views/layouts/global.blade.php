@@ -8,8 +8,12 @@
 
         <title>@yield('title')</title>
         @vite('resources/css/app.css')
+
     </head>
-    <body>
+    <body class="overscroll-none">
         @yield('content')
+        @vite('resources/js/app.js')
+        @vite('resources/js/navbar.js')
     </body>
 </html>
+

@@ -42,10 +42,10 @@ Masuk - Informatika | Universitas Mulawarman
                     </div>
                     <div class="w-full flex justify-between mt-4">
                         <span class="text-sm">
-                            Don't have an account?
-                            <a href="{{ route('register') }}" class="text-sm text-end text-blue-900 hover:font-medium"> Register here</a>
+                            Belum punya akun?
+                            <a href="{{ route('register') }}" class="text-sm text-end text-blue-900 hover:font-medium">Daftar</a>
                         </span>
-                        <a href="#" class=" text-sm text-end text-blue-900 hover:font-medium">Forgot password?</a>
+                        <a href="#" class=" text-sm text-end text-blue-900 hover:font-medium">Lupa password?</a>
                     </div>
                     <button type="submit" class="w-full h-auto py-4 mt-16 text-white font-medium bg-blue-800 rounded-md flex justify-center items-center hover:bg-blue-700">
                         Masuk
