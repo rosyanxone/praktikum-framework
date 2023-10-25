@@ -8,7 +8,8 @@
 <div class="h-screen bg-slate-300 flex justify-center items-center">
     <div class="w-1/3 p-16 rounded-xl bg-white text-center divide-y-2 flex flex-col">
         <h1 class="text-3xl mb-4 font-bold">Tambah Data Mahasiswa</h1>
-        <form action="" method="post" class="pt-8">
+        <form action="{{route('staff.store')}}" method="post" class="pt-8">
+        @csrf
             <div class="w-full relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                     <svg class="h-6 fill-slate-400" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
@@ -48,7 +49,12 @@
                     </svg>
 
                 </div>
-                <input type="text" name="dosen-pembimbing" placeholder="Dosen Pembimbing..." class="w-full ps-12 pe-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
+                <select type="text" name="dosen_id" class="w-full ps-12 pe-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
+                    <option value="" disabled selected>Dosen Pembimbing...</option>
+                    @foreach ($dosens as $dosen)
+                        <option value="{{$dosen->id}}">{{$dosen->nama}}</option>
+                    @endforeach
+                </select>
             </div>
             <button type="submit" class="w-full h-auto py-4 mt-16 text-white font-medium bg-blue-800 rounded-md flex justify-center items-center hover:bg-blue-700">
                 Tambah Data

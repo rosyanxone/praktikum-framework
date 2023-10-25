@@ -8,8 +8,25 @@
         @include('components.sidebar')
         <div class="w-full flex flex-col bg-slate-100">
             @include('components.header', ['nama' => 'Tegar', 'gambar' => 'assets/images/ka-prodi.jpg'])
-
             <div class="h-full m-4 p-8 bg-white rounded-lg drop-shadow-md">
+            @if(session('error'))
+                <div class="w-full relative mb-6">
+                    <div class="p-2 rounded-sm bg-red-100 ring-1 ring-red-500">
+                        <p class="text-red-500">
+                            {{ session('error') }}
+                        </p>
+                    </div>
+                </div>
+            @endif
+            @if(session('success'))
+                <div class="w-full relative mb-6">
+                    <div class="p-2 rounded-sm bg-green-100 ring-1 ring-green-500">
+                        <p class="text-green-500">
+                            {{ session('success') }}
+                        </p>
+                    </div>
+                </div>
+            @endif
                 <p class="text-4xl font-bold mb-4">Data Mahasiswa</p>
                 <hr><br>
                 <div class="w-full h-auto flex justify-end">
@@ -76,7 +93,6 @@
                                     </td>
                                 </tr>
                             @endforeach
-
                         </tbody>
                     </table>
                 </div>
