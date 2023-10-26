@@ -40,16 +40,6 @@ Route::middleware('auth')->group(function () {
         ]);
     })->name('staff.mahasiswa');
 
-    Route::get('/staff/mahasiswa/tambah', function () {
-        return view('staff.crud.add');
-    })->name('staff.add');
-
-    Route::get('/staff/mahasiswa/edit', function () {
-        return view('staff.crud.edit');
-    })->name('staff.edit');
-
-
-
     Route::get('/staff/dosen', function () {
         return view('staff.dosen', [
             'dosen' => Dosen::all()

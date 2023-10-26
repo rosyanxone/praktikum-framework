@@ -48,7 +48,12 @@
                     </svg>
 
                 </div>
-                <input type="text" name="dosen-pembimbing" placeholder="Dosen Pembimbing..." class="w-full ps-12 pe-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
+                <select type="text" name="dosen_id" class="w-full ps-12 pe-4 py-2 bg-slate-50 rounded-sm ring-1 ring-slate-300 focus:outline-none focus:ring-blue-500">
+                    <option value="" disabled selected>Dosen Pembimbing...</option>
+                    @foreach ($dosens as $dosen)
+                        <option value="{{$dosen->id}}">{{$dosen->nama}}</option>
+                    @endforeach
+                </select>
             </div>
             <button type="submit" class="w-full h-auto py-4 mt-16 text-white font-medium bg-blue-800 rounded-md flex justify-center items-center hover:bg-blue-700">
                 Tambah Data
