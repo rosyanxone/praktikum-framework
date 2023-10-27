@@ -8,7 +8,8 @@
 <div class="h-screen bg-slate-300 flex justify-center items-center">
     <div class="w-1/3 p-16 rounded-xl bg-white text-center divide-y-2 flex flex-col">
         <h1 class="text-3xl mb-4 font-bold">Edit Data Mahasiswa</h1>
-        <form action="" method="post" class="pt-8">   
+        <form action="{{route('staff.update', $mahasiswas->id)}}" method="post" class="pt-8">
+        @csrf       
         <div class="w-full relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                     <svg class="h-6 fill-slate-400" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">

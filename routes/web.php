@@ -4,6 +4,7 @@ use App\Models\Dosen;
 use App\Models\Mahasiswa;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MahasiswaController;
 
 Route::get('/', function () {
     return view('home');
@@ -36,7 +37,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/staff/mahasiswa', function () {
         return view('staff.mahasiswa', [
-            'mahasiswa' => Mahasiswa::all()
+            'mahasiswa' => Mahasiswa::all(),
         ]);
     })->name('staff.mahasiswa');
 
@@ -53,6 +54,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/staff/pesan', function () {
         return view('staff.pesan');
     })->name('staff.pesan');
+
+
+
+    Route::controller(MahasiswaController::class)->group(function(){
+        Route::get('/staff/mahasiswa/tambah', 'tambah')->name('staff.add');
+        Route::post('/staff/mahasiswa/tambah/action','store')->name('staff.store');
+        Route::get('/staff/mahasiswa/edit/{id}', 'edit')->name('staff.edit');
+        Route::post('/staff/mahasiswa/edit/{id}/action', 'update')->name('staff.update');
+        Route::post('/staff/mahasiswa/delete/{id}/action', 'delete')->name('staff.delete');
+    });
 });
 
 

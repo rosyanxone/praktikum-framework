@@ -11,7 +11,7 @@ class Mahasiswa extends Model
     use HasFactory;
 
     protected $table = 'mahasiswas';
-    protected $fillable = ['nim', 'nama', 'kelas', 'angkatan'];
+    protected $fillable = ['nim', 'nama', 'kelas', 'angkatan', 'dosen_id'];
 
     public function dosen(): BelongsTo
     {
