@@ -40,7 +40,7 @@ Route::middleware('auth')->group(function () {
             'mahasiswa' => Mahasiswa::all(),
         ]);
     })->name('staff.mahasiswa');
-    
+
     Route::get('/staff/dosen', function () {
         return view('staff.dosen', [
             'dosen' => Dosen::all()
