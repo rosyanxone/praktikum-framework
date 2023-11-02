@@ -36,13 +36,13 @@ class ApiController extends Controller
 
         $respon = [
             'status' => 'success',
-            'message' => 'Berhasil Menambah data Mahasiswa',
+            'message' => 'Data Berhasil ditambah',
             'data' => $mahasiswa,
         ];
         return response()->json($respon);
     }
 
-    public function update(Request $request){
+    public function update(Request $request, $id){
         $request->validate([
             'nim' => 'required|string|max:20',
             'nama' => 'required|string',
@@ -50,7 +50,6 @@ class ApiController extends Controller
             'angkatan' => 'required|integer',
             'dosen_id' => 'required'
         ]);
-        $id = $request->id;
 
         $mahasiswa = Mahasiswa::findOrFail($id);
         $mahasiswa->update([
@@ -62,7 +61,7 @@ class ApiController extends Controller
         ]);
         $respon = [
             'status' => 'success',
-            'message' => 'Berhasil Mengubah data Mahasiswa',
+            'message' => 'Data Berhasil Diubah',
             'data' => $mahasiswa,
         ];
         return response()->json($respon);

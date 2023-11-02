@@ -37,9 +37,9 @@ class MahasiswaController extends Controller
             'dosen_id' => 'required'
         ]);
 
-        Http::asForm()->post($endpoint,$validateData); 
+        $response = Http::asForm()->post($endpoint,$validateData); 
 
-        return redirect()->route('staff.mahasiswa')->with('success','Data Mahasiswa Berhasil Ditambahkan');
+        return redirect()->route('staff.mahasiswa')->with($response['status'],$response['message']);
     }
 
     
@@ -68,28 +68,26 @@ class MahasiswaController extends Controller
     }
 
     public function update(Request $request, $id){
-        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa/edit';
+        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa/edit/'.$id;
 
         $validateData = $request->validate([
             'nim' => 'required|string|max:20',
             'nama' => 'required|string',
             'kelas' => 'required|string',
             'angkatan' => 'required|integer',
-            'dosen_id' => 'required',
-            'id'=>$id
+            'dosen_id' => 'required'
         ]);
 
-        Http::asForm()->post($endpoint,$validateData); 
+        $response = Http::asForm()->post($endpoint,$validateData); 
 
-
-        return redirect()->route('staff.mahasiswa')->with('success','Data Mahasiswa Berhasil Diubah');
+        return redirect()->route('staff.mahasiswa')->with($response['status'],$response['message']);
     }
 
     public function delete($id){
         $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa/hapus';
 
-        Http::asForm()->post($endpoint,['id'=>$id]); 
+        $response = Http::asForm()->post($endpoint,['id'=>$id]); 
 
-        return redirect()->route('staff.mahasiswa')->with('success','Data Mahasiswa Berhasil Dihapus');
+        return redirect()->route('staff.mahasiswa')->with($response['status'],$response['message']);
     }
 }
