@@ -17,15 +17,14 @@ class MahasiswaController extends Controller
         return view('staff.mahasiswa',[
             'mahasiswa'=>$data
         ]);
-        
     }
     public function tambah(){
         return view('staff.crud.add', [
             'dosens' => Dosen::all()
         ]);
     }
-    public function storetoAPI(Request $request){
 
+    public function store(Request $request){
         $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa/tambah';
 
         // Validate Input
@@ -40,24 +39,6 @@ class MahasiswaController extends Controller
         $response = Http::asForm()->post($endpoint,$validateData); 
 
         return redirect()->route('staff.mahasiswa')->with($response['status'],$response['message']);
-    }
-
-    
-
-    public function store(Request $request){
-        // Validate Input
-        $validateData = $request->validate([
-            'nim' => 'required|string|max:20',
-            'nama' => 'required|string',
-            'kelas' => 'required|string',
-            'angkatan' => 'required|integer',
-            'dosen_id' => 'required'
-        ]);
-
-
-        Mahasiswa::create($validateData);
-        
-        return redirect()->route('staff.mahasiswa')->with('success','Data Mahasiswa Berhasil Ditambahkan');
     }
 
     public function edit($id){
