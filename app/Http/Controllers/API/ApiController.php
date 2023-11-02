@@ -41,4 +41,41 @@ class ApiController extends Controller
         ];
         return response()->json($respon);
     }
+
+    public function update(Request $request){
+        $request->validate([
+            'nim' => 'required|string|max:20',
+            'nama' => 'required|string',
+            'kelas' => 'required|string',
+            'angkatan' => 'required|integer',
+            'dosen_id' => 'required'
+        ]);
+        $id = $request->id;
+
+        $mahasiswa = Mahasiswa::findOrFail($id);
+        $mahasiswa->update([
+            'nim' => $request->nim,
+            'nama' => $request->nama,
+            'kelas' => $request->kelas,
+            'angkatan' => $request->angkatan,
+            'dosen_id' => $request->dosen_id,
+        ]);
+        $respon = [
+            'status' => 'success',
+            'message' => 'Berhasil Mengubah data Mahasiswa',
+            'data' => $mahasiswa,
+        ];
+        return response()->json($respon);
+    }
+
+    public function destroy(Request $request){
+        $id = $request->id;
+        $mahasiswa = Mahasiswa::findOrFail($id);
+        $mahasiswa->delete();
+        $respon = [
+            'status' => 'success',
+            'message' => 'Data Berhasil dihapus',
+        ];
+        return response()->json($respon);
+    }
 }

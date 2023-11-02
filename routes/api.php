@@ -20,6 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::controller(ApiController::class)->group(function () {
-    Route::get('staff/data/mahasiswa','getMahasiswa')->name('ARMahasiswa');
-    Route::post('staff/data/mahasiswa/tambah','createMahasiswa')->name('ACMahasiswa');
-});
+    Route::get('staff/data/mahasiswa','getMahasiswa');
+    Route::post('staff/data/mahasiswa/tambah','createMahasiswa');
+    Route::post('/staff/data/mahasiswa/edit', 'update');
+    Route::post('/staff/data/mahasiswa/hapus', 'destroy');
+})->middleware('auth');
