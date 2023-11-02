@@ -13,11 +13,7 @@ class MahasiswaController extends Controller
     public function index(){
         $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa';
 
-        $client = new Client();
-
-        $response = $client->request('GET', $endpoint);
-        $data = json_decode($response->getBody(), true);
-
+        $data = Http::get($endpoint);
         return view('staff.mahasiswa',[
             'mahasiswa'=>$data
         ]);
