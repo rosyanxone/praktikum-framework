@@ -4,7 +4,7 @@
     "scripts": {
         "dev": "concurrently npm:watch:*",
         "watch:vite": "vite",
-        "watch:artisan" : "php artisan serve",
+        "watch:artisan": "php artisan serve",
         "build": "vite build"
     },
     "devDependencies": {

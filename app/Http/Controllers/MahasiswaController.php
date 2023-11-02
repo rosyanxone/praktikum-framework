@@ -3,11 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dosen;
+use GuzzleHttp\Client;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 
 class MahasiswaController extends Controller
 {
+    public function index(){
+        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa';
+
+        $client = new Client();
+
+        $response = $client->request('GET', $endpoint);
+        $data = json_decode($response->getBody(), true);
+
+        return view('staff.mahasiswa',[
+            'mahasiswa'=>$data
+        ]);
+        
+    }
     public function tambah(){
         return view('staff.crud.add', [
             'dosens' => Dosen::all()
