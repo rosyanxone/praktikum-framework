@@ -60,7 +60,8 @@ Route::middleware('auth')->group(function () {
     Route::controller(MahasiswaController::class)->group(function(){
         Route::get('/staff/mahasiswa','index')->name('staff.mahasiswa');
         Route::get('/staff/mahasiswa/tambah', 'tambah')->name('staff.add');
-        Route::post('/staff/mahasiswa/tambah/action','store')->name('staff.store');
+        Route::post('/staff/mahasiswa/tambah/action','storetoAPI')->name('staff.store');
+        // Route::post('/staff/mahasiswa/tambah/action','store')->name('staff.store');
         Route::get('/staff/mahasiswa/edit/{id}', 'edit')->name('staff.edit');
         Route::post('/staff/mahasiswa/edit/{id}/action', 'update')->name('staff.update');
         Route::post('/staff/mahasiswa/delete/{id}/action', 'delete')->name('staff.delete');

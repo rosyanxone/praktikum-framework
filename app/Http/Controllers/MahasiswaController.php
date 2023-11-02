@@ -6,6 +6,7 @@ use App\Models\Dosen;
 use GuzzleHttp\Client;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class MahasiswaController extends Controller
 {
@@ -27,6 +28,25 @@ class MahasiswaController extends Controller
             'dosens' => Dosen::all()
         ]);
     }
+    public function storetoAPI(Request $request){
+
+        $endpoint = env('BASE_ENV').'/api/staff/data/mahasiswa/tambah';
+
+        // Validate Input
+        $validateData = $request->validate([
+            'nim' => 'required|string|max:20',
+            'nama' => 'required|string',
+            'kelas' => 'required|string',
+            'angkatan' => 'required|integer',
+            'dosen_id' => 'required'
+        ]);
+
+        Http::asForm()->post($endpoint,$validateData); 
+
+        return redirect()->route('staff.mahasiswa')->with('success','Data Mahasiswa Berhasil Ditambahkan');
+    }
+
+    
 
     public function store(Request $request){
         // Validate Input
