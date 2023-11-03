@@ -35,11 +35,11 @@ Route::middleware('auth')->group(function () {
         return view('staff.dashboard');
     })->name('staff.dashboard');
 
-    Route::get('/staff/mahasiswa', function () {
-        return view('staff.mahasiswa', [
-            'mahasiswa' => Mahasiswa::all(),
-        ]);
-    })->name('staff.mahasiswa');
+    // Route::get('/staff/mahasiswa', function () {
+    //     return view('staff.mahasiswa', [
+    //         'mahasiswa' => Mahasiswa::all(),
+    //     ]);
+    // })->name('staff.mahasiswa');
 
     Route::get('/staff/dosen', function () {
         return view('staff.dosen', [
@@ -58,6 +58,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::controller(MahasiswaController::class)->group(function(){
+        Route::get('/staff/mahasiswa','index')->name('staff.mahasiswa');
         Route::get('/staff/mahasiswa/tambah', 'tambah')->name('staff.add');
         Route::post('/staff/mahasiswa/tambah/action','store')->name('staff.store');
         Route::get('/staff/mahasiswa/edit/{id}', 'edit')->name('staff.edit');
